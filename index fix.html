@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sayang 💜</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Trebuchet MS', sans-serif; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #cdb4db, #e6ccff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3a2c4d;
+      text-align: center;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 22px;
+      max-width: 420px;
+      box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+      animation: fadeIn 1.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+    .photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 3px solid #b583d9;
+      background: #eee;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    h1 { font-size: 1.9rem; margin-bottom: 6px; }
+    h2 { font-size: 1.1rem; margin-bottom: 18px; font-weight: 400; }
+    p { font-size: 0.95rem; line-height: 1.7; margin-bottom: 22px; }
+    button {
+      background: linear-gradient(135deg, #b583d9, #a06cd5);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 28px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.3s;
+      letter-spacing: 0.5px;
+    }
+    button:hover { transform: scale(1.05); opacity: 0.9; }
+    footer { margin-top: 18px; font-size: 0.75rem; opacity: 0.7; }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      from { transform: translateY(100vh); opacity: 0; }
+      10% { opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="left:10%; animation-delay:0s"></div>
+  <div class="sparkle" style="left:30%; animation-delay:2s"></div>
+  <div class="sparkle" style="left:50%; animation-delay:4s"></div>
+  <div class="sparkle" style="left:70%; animation-delay:1s"></div>
+  <div class="sparkle" style="left:90%; animation-delay:3s"></div>
+
+  <div class="card">
+    <div class="photo">
+      <!-- GANTI DENGAN FOTO KALIAN -->
+      <img src="foto-kita.jpg" alt="Foto Kita">
+    </div>
+    <h1>Happy Birthday</h1>
+    <h2>Siska Emalinda 💜</h2>
+    <p>
+      Hari ini tentang kamu.
+      Tentang senyum mu, tawa mu,
+      dan semua hal kecil yang .
+    </p>
+    <button onclick="openLetter()">Buka Surat 💌</button>
+    <footer>dibuat khusus untuk kamu — always yours</footer>
+  </div>
+
+  <!-- Musik (opsional) -->
+  <!-- GANTI src DENGAN FILE MUSIK JIKA MAU -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function openLetter() {
+      alert('Untuk Siska 💜\n\nTerima kasih sudah hadir dan bertahan.\nSemoga ulang tahun ini membawa kebahagiaan yang kamu pantas dapatkan.\nAku selalu ada untuk kamu.');
+    }
+  </script>
+</body>
+</html>
